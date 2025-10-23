@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 14 2025 г., 07:49
+-- Время создания: Окт 23 2025 г., 05:54
 -- Версия сервера: 8.0.30
--- Версия PHP: 8.1.9
+-- Версия PHP: 8.0.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,6 +40,17 @@ CREATE TABLE `category` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `login`
+--
+
+CREATE TABLE `login` (
+  `login` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `reg`
 --
 
@@ -67,7 +78,8 @@ INSERT INTO `reg` (`id`, `login`, `pass`, `mail`, `family`, `name`, `dubel_name`
 (6, '123', '123', '123@123', '123', '123', '123', '0'),
 (7, '123', '123', '123@123', '123', '123', '123', '0'),
 (8, '123', '123', '123@mail.com', '123', '123', '123', '0'),
-(9, '123', '123', '123@mail.com', '123', '123', '123', '0');
+(9, '123', '123', '123@mail.com', '123', '123', '123', '0'),
+(10, 'fgdfgdfsg', 'sdfdsfsdf', 'dfgdgdgf@sgdsg', 'sdfsdfdsf', 'sdfdsfsf', 'dsfdsff', '0');
 
 -- --------------------------------------------------------
 
@@ -112,7 +124,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT для таблицы `reg`
 --
 ALTER TABLE `reg`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
